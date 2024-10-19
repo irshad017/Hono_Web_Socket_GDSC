@@ -6,6 +6,7 @@ import LineChart from "./LineChart";
 import StackedBarChart from "./StackedBarChart";
 import PieChartCard from "./PieChartCard";
 import FilledLineChart from "./LineFIlled";
+import DoughnutChart from "./Doughnut";
 
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement, Filler);
 
@@ -29,11 +30,15 @@ const Dashboard: React.FC = () => {
                     </div>
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
                         <h2 className="text-lg font-semibold mb-2">Real-time Data Chart</h2>
-                        <FilledLineChart title="LIne" />
+                        <FilledLineChart title="Line" />
                     </div>
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-                        <h2 className="text-lg font-semibold mb-2">Customer Demographics</h2>
-                        <PieChartCard title="PIe"/>
+                        <h2 className="text-lg font-semibold mb-2">Product Sales</h2>
+                        <PieChartCard title="Pie"/>
+                    </div>
+                    <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <h2 className="text-lg font-semibold mb-2">Product Orders</h2>
+                        <DoughnutChart title="Doughnut"/>
                     </div>
                 {/* </div> */}
                 {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}

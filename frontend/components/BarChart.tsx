@@ -1,10 +1,8 @@
-// components/BarChart.tsx
 import React, { useEffect, useState } from 'react';
 import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import socket from '@/utils/socket';
 
-// Register the components
 Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 interface BarChartProps {

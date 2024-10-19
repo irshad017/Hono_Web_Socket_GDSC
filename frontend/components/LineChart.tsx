@@ -1,8 +1,7 @@
-// components/LineChart.tsx
 import React from 'react';
 import { Chart, CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-// Register the components
+
 Chart.register(CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend);
 
 interface LineChartProps {

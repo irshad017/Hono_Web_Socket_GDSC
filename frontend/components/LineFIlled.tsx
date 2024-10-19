@@ -3,7 +3,6 @@ import { Chart, CategoryScale, LinearScale, LineElement, PointElement, Title, To
 import { Line } from 'react-chartjs-2';
 import socket from '@/utils/socket';
 
-// Register the components
 Chart.register(CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend);
 
 interface LineChartProps {
@@ -12,33 +11,25 @@ interface LineChartProps {
 
 const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
     const [data1, setData1] = useState<number[]>([]);
-    // const [data2, setData2] = useState<number[]>([]);
-    // const [data3, setData3] = useState<number[]>([]);
-    // const [PIEdata, setPIEData] = useState<number[]>([]);
     const [times, setTimes] = useState<string[]>([]);
-    const [date, setDate] = useState<string[]>([]);
+    const [date, setDate] = useState<string>("");
+    
 
     useEffect(() => {
         const handleMessage = (event: MessageEvent) => {
             const message = JSON.parse(event.data);
-        
-            // Update based on the chart type received from the backend
             if (message.chart === 'chart1') {
                 setData1((prevData) => [...prevData, message.value].slice(-50)); // For Chart 1
-                setDate(message.date)
+                // setDate(message.date)
             } 
-            // else if (message.chart === 'chart2') {
-            //     // setData2((prevData) => [...prevData, message.value].slice(-10)); // For Chart 2
-            // } else if (message.chart === 'chart3') {
-            //     // setData3((prevData) => [...prevData, message.value].slice(-10)); // For Chart 3
-            // }
-        
-            // Update time for all charts (assuming the same timestamp applies)
-            setTimes((prevTimes) => [...prevTimes, message.time].slice(-50));
+            const now =new Date()
+            const time = now.toLocaleTimeString();
+            const DaTe = now.toLocaleDateString();
+            setTimes((e)=> [...e, time].slice(-50))
+            setDate(DaTe)
+            // setTimes((prevTimes) => [...prevTimes, message.time].slice(-3));
         };
-    
         socket.addEventListener('message', handleMessage);
-    
         return () => {
             socket.removeEventListener('message', handleMessage);
         };
@@ -109,7 +100,6 @@ const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
             },
         },
     };
-
 
     return (
         <div className="bg-white rounded-lg shadow-md p-6">

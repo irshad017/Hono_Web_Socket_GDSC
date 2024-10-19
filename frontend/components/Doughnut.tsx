@@ -1,9 +1,7 @@
-// components/DoughnutChart.tsx
 import React from 'react';
 import { Chart, CategoryScale, LinearScale, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
-// Register the components
 Chart.register(CategoryScale, LinearScale, ArcElement, Tooltip, Legend, Title);
 
 interface DoughnutChartProps {

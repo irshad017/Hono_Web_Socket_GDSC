@@ -1,11 +1,9 @@
-// components/PieChartCard.tsx
 import React, { useEffect, useState } from 'react';
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import socket from '@/utils/socket';
 
 
-// Register the necessary components
 Chart.register(ArcElement, Tooltip, Legend);
 
 const PieChartCard: React.FC<{ title: string }> = ({ title }) => {
