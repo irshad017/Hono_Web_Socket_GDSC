@@ -22,21 +22,21 @@ const Dashboard: React.FC = () => {
                     <StatsCard title="Statistics 3" value="75%" />
                     <StatsCard title="Statistics 4" value="100%" />
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-                        <h2 className="text-lg font-semibold mb-2">Real-time Data Chart</h2>
-                        <FilledLineChart title="LIne" />
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
                         <h2 className="text-lg font-semibold mb-2">Sales Statistics</h2>
                         <BarChart title="Bar" />
                     </div>
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+                        <h2 className="text-lg font-semibold mb-2">Real-time Data Chart</h2>
+                        <FilledLineChart title="LIne" />
+                    </div>
+                    <div className="bg-gray-100 p-4 rounded-lg shadow-md">
                         <h2 className="text-lg font-semibold mb-2">Customer Demographics</h2>
                         <PieChartCard title="PIe"/>
                     </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* </div> */}
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
                         <h2 className="text-lg font-semibold mb-2">Growth Statistics</h2>
                         <LineChart title="Line" />

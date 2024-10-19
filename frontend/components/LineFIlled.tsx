@@ -16,6 +16,7 @@ const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
     // const [data3, setData3] = useState<number[]>([]);
     // const [PIEdata, setPIEData] = useState<number[]>([]);
     const [times, setTimes] = useState<string[]>([]);
+    const [date, setDate] = useState<string[]>([]);
 
     useEffect(() => {
         const handleMessage = (event: MessageEvent) => {
@@ -24,6 +25,7 @@ const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
             // Update based on the chart type received from the backend
             if (message.chart === 'chart1') {
                 setData1((prevData) => [...prevData, message.value].slice(-50)); // For Chart 1
+                setDate(message.date)
             } 
             // else if (message.chart === 'chart2') {
             //     // setData2((prevData) => [...prevData, message.value].slice(-10)); // For Chart 2
@@ -111,7 +113,7 @@ const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
 
     return (
         <div className="bg-white rounded-lg shadow-md p-6">
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <h3 className="text-xl font-semibold">{title} <span className='text-sm text-gray-600'>Date: {date} </span></h3>
         <div className="mt-4">
             <Line data={chartData} options={options} />
         </div>
