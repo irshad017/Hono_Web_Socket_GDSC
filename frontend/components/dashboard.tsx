@@ -23,7 +23,7 @@ const Dashboard: React.FC = () => {
                     <StatsCard title="Statistics 3" value="75%" />
                     <StatsCard title="Statistics 4" value="100%" />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
                         <h2 className="text-lg font-semibold mb-2">Sales Statistics</h2>
                         <BarChart title="Bar" />

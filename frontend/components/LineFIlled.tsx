@@ -14,20 +14,17 @@ const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
     const [times, setTimes] = useState<string[]>([]);
     const [date, setDate] = useState<string>("");
     
-
     useEffect(() => {
         const handleMessage = (event: MessageEvent) => {
             const message = JSON.parse(event.data);
             if (message.chart === 'chart1') {
-                setData1((prevData) => [...prevData, message.value].slice(-50)); // For Chart 1
-                // setDate(message.date)
+                setData1((prevData) => [...prevData, message.value].slice(-35)); // For Chart 1
+                const now =new Date()
+                const DaTe = now.toLocaleDateString();
+                setDate(DaTe)
+                const time = now.toLocaleTimeString();
+                setTimes((e)=> [...e, time].slice(-35))
             } 
-            const now =new Date()
-            const time = now.toLocaleTimeString();
-            const DaTe = now.toLocaleDateString();
-            setTimes((e)=> [...e, time].slice(-50))
-            setDate(DaTe)
-            // setTimes((prevTimes) => [...prevTimes, message.time].slice(-3));
         };
         socket.addEventListener('message', handleMessage);
         return () => {
@@ -96,7 +93,10 @@ const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
                 },
                 ticks: {
                     color: 'rgba(0, 0, 0, 0.7)',
+                    stepSize: 10
                 },
+                min: 0,
+                max: 100,
             },
         },
     };
