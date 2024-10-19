@@ -12,9 +12,9 @@ interface LineChartProps {
 
 const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
     const [data1, setData1] = useState<number[]>([]);
-    const [data2, setData2] = useState<number[]>([]);
-    const [data3, setData3] = useState<number[]>([]);
-    const [PIEdata, setPIEData] = useState<number[]>([]);
+    // const [data2, setData2] = useState<number[]>([]);
+    // const [data3, setData3] = useState<number[]>([]);
+    // const [PIEdata, setPIEData] = useState<number[]>([]);
     const [times, setTimes] = useState<string[]>([]);
 
     useEffect(() => {
@@ -24,11 +24,12 @@ const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
             // Update based on the chart type received from the backend
             if (message.chart === 'chart1') {
                 setData1((prevData) => [...prevData, message.value].slice(-50)); // For Chart 1
-            } else if (message.chart === 'chart2') {
-                setData2((prevData) => [...prevData, message.value].slice(-10)); // For Chart 2
-            } else if (message.chart === 'chart3') {
-                setData3((prevData) => [...prevData, message.value].slice(-10)); // For Chart 3
-            }
+            } 
+            // else if (message.chart === 'chart2') {
+            //     // setData2((prevData) => [...prevData, message.value].slice(-10)); // For Chart 2
+            // } else if (message.chart === 'chart3') {
+            //     // setData3((prevData) => [...prevData, message.value].slice(-10)); // For Chart 3
+            // }
         
             // Update time for all charts (assuming the same timestamp applies)
             setTimes((prevTimes) => [...prevTimes, message.time].slice(-50));

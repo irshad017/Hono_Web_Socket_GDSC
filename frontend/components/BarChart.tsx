@@ -13,14 +13,14 @@ interface BarChartProps {
 
 const BarChart: React.FC<BarChartProps> = ({ title }) => {
     const [BARData, setBARData] = useState<number[]>([])
-    const [BARTimes, setBARTimes] = useState<string[]>([])
+    // const [BARTimes, setBARTimes] = useState<string[]>([])
     useEffect(() => {
         const handleMessage = (event: MessageEvent) => {
             const message = JSON.parse(event.data);
             console.log("BAR: ", message)
             if(message.chart === 'chart2'){
                 setBARData((prevData) => [...prevData, message.value].slice(-5)); 
-                setBARTimes((prevTimes) => [...prevTimes, message.time].slice(-5));
+                // setBARTimes((prevTimes) => [...prevTimes, message.time].slice(-5));
             }else{
                 console.log("Not FOr me")
             }

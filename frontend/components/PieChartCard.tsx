@@ -10,14 +10,14 @@ Chart.register(ArcElement, Tooltip, Legend);
 
 const PieChartCard: React.FC<{ title: string }> = ({ title }) => {
     const [PIEData, setPIEData] = useState<number[]>([])
-    const [PIETimes, setPIETimes] = useState<string[]>([])
+    // const [PIETimes, setPIETimes] = useState<string[]>([])
     useEffect(() => {
         const handleMessage = (event: MessageEvent) => {
             const message = JSON.parse(event.data);
             console.log("BAR: ", message)
             if(message.chart === 'chart3'){
                 setPIEData((prevData) => [...prevData, message.value].slice(-8)); 
-                setPIETimes((prevTimes) => [...prevTimes, message.time].slice(-8));
+                // setPIETimes((prevTimes) => [...prevTimes, message.time].slice(-8));
             }else{
                 console.log("Not FOr me")
             }

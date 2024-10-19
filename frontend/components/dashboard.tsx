@@ -1,4 +1,4 @@
-import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement, ScriptableContext, Filler } from "chart.js";
+import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement, Filler } from "chart.js";
 import StatsCard from "./StatsCard";
 import Sidebar from "./SideBar";
 import BarChart from "./BarChart";
