@@ -13,20 +13,20 @@ interface LineChartProps {
 
 const LineChart: React.FC<LineChartProps> = ({ title }) => {
     const [LineChartData, setLineData] = useState<number[]>([])
-    useEffect(()=>{
-        const FetchData = async ()=> {
-            const response = await axios.get(`https://data.gdscnsut.com/`)
-            console.log("GDSC: ",response.data)
-            setLineData(response.data)
-        }
-        FetchData()
-    },[])
+    // useEffect(()=>{
+    //     const FetchData = async ()=> {
+    //         const response = await axios.get(`https://data.gdscnsut.com/`)
+    //         // console.log("GDSC: ",response.data)
+    //         setLineData(response.data)
+    //     }
+    //     FetchData()
+    // },[])
     const data = {
         labels: ['January', 'February', 'March', 'April', 'May'],
         datasets: [
         {
             label: 'Growth',
-            data: LineChartData,
+            data: [23,83,19,78,4,100],
             fill: false,
             borderColor: '#4f46e5',
         },

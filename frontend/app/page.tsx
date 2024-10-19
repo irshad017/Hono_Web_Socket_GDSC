@@ -6,7 +6,6 @@ import Dashboard from "@/components/dashboard";
 const Home: React.FC = () => {
   return (
     <div className="container">
-      <h1>Real-time Dashboard</h1>
       <Dashboard />
     </div>
   );
