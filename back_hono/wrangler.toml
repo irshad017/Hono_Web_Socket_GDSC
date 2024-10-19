@@ -1,0 +1,29 @@
+name = "back_hono"
+main = "src/index.ts"
+compatibility_date = "2024-10-19"
+compatibility_flags = [ "nodejs_compat" ]
+
+[vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiOWI3ODM4MDktYzMxMS00ZjUyLWE0YmItY2I2NGRiOTAwZDc3IiwidGVuYW50X2lkIjoiMjVmNzU1NGIzMTYzNTFlN2NhNDU5NzM2MjRiMTI4NzgzN2MwMTIwYTU3NTQ5YzVjZmVjYzZlYjE2NzU3N2U3MyIsImludGVybmFsX3NlY3JldCI6ImQ2YTczMzZmLTdlMTktNDQ4Ny1hYzA4LTM5NzVkMzU1NmZhNSJ9.YnSkiiRg0AWLocPABeMSobm4nvaT7G9p_OMfGNPZevo"
+# MY_VAR = "my-variable"
+
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
+
+# [observability]
+# enabled = true
+# head_sampling_rate = 1
