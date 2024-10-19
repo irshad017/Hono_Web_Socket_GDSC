@@ -32,19 +32,6 @@ const DoughnutChart: React.FC<DoughnutChartProps> = ({ title }) => {
         ],
     };
 
-    const options = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: title, // Use the title prop here
-            },
-        },
-    };
-
     return (
         <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold">{title}</h3>
