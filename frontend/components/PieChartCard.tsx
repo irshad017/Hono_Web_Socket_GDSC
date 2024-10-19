@@ -29,7 +29,7 @@ const PieChartCard: React.FC<{ title: string }> = ({ title }) => {
         };
     }, []);
     const data = {
-        labels: ['Product A', 'B', 'C', 'D', "E"],
+        labels: ['Product A', 'B', 'C', 'D', 'E'],
         datasets: [
         {
             data: PIEData,
