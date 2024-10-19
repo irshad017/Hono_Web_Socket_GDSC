@@ -16,7 +16,7 @@ const PieChartCard: React.FC<{ title: string }> = ({ title }) => {
             const message = JSON.parse(event.data);
             console.log("BAR: ", message)
             if(message.chart === 'chart3'){
-                setPIEData((prevData) => [...prevData, message.value].slice(-8)); 
+                setPIEData((prevData) => [...prevData, message.value].slice(-5)); 
                 // setPIETimes((prevTimes) => [...prevTimes, message.time].slice(-8));
             }else{
                 console.log("Not FOr me")
@@ -29,11 +29,11 @@ const PieChartCard: React.FC<{ title: string }> = ({ title }) => {
         };
     }, []);
     const data = {
-        labels: ['Product A', 'B', 'C', 'D', "E", "F", "G","H"],
+        labels: ['Product A', 'B', 'C', 'D', "E"],
         datasets: [
         {
             data: PIEData,
-            backgroundColor: ['red',"yellow","green",'#4f46e5', '#f97316', '#10b981', "gray", "purple"],
+            backgroundColor: ['red',"yellow",'#4f46e5', '#f97316', '#10b981'],
         },
         ],
     };

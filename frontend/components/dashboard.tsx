@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
         <div className="flex min-h-screen bg-gray-50">
             <Sidebar />
             <main className="flex-1 p-6 bg-white shadow-md">
-                <h1 className="text-2xl font-semibold mb-4">Dashboard</h1>
+                <h1 className="text-3xl font-semibold mb-4">Dashboard</h1>
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
                     <StatsCard title="Statistics 1" value="21%" />
                     <StatsCard title="Statistics 2" value="56%" />
