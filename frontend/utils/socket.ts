@@ -10,7 +10,7 @@ socket.addEventListener("open", () => {
 
 socket.addEventListener("message", (event) => {
     const message = JSON.parse(event.data);
-    console.log("Message from server:", message);
+    // console.log("Message from server:", message);
 });
 
 socket.addEventListener("error", (error) => {

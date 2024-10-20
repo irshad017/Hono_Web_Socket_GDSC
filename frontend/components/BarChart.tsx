@@ -15,13 +15,14 @@ const BarChart: React.FC<BarChartProps> = ({ title }) => {
     useEffect(() => {
         const handleMessage = (event: MessageEvent) => {
             const message = JSON.parse(event.data);
-            console.log("BAR: ", message)
+            // console.log("BAR: ", message)
             if(message.chart === 'chart2'){
                 setBARData((prevData) => [...prevData, message.value].slice(-5)); 
                 // setBARTimes((prevTimes) => [...prevTimes, message.time].slice(-5));
-            }else{
-                console.log("Not FOr me")
             }
+            // else{
+            //     // console.log("Data is not of Chart2")
+            // }
         };
 
         socket.addEventListener('message', handleMessage);

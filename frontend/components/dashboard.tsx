@@ -40,8 +40,6 @@ const Dashboard: React.FC = () => {
                         <h2 className="text-lg font-semibold mb-2">Product Orders</h2>
                         <DoughnutChart title="Doughnut"/>
                     </div>
-                {/* </div> */}
-                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
                         <h2 className="text-lg font-semibold mb-2">Growth Statistics</h2>
                         <LineChart title="Line" />

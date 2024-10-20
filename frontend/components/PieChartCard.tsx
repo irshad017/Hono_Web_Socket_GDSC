@@ -12,13 +12,14 @@ const PieChartCard: React.FC<{ title: string }> = ({ title }) => {
     useEffect(() => {
         const handleMessage = (event: MessageEvent) => {
             const message = JSON.parse(event.data);
-            console.log("BAR: ", message)
+            // ("BAR: ", message)
             if(message.chart === 'chart3'){
                 setPIEData((prevData) => [...prevData, message.value].slice(-5)); 
                 // setPIETimes((prevTimes) => [...prevTimes, message.time].slice(-8));
-            }else{
-                console.log("Not FOr me")
             }
+            // else{
+            //     // ("Not FOr Pie Chart")
+            // }
         };
 
         socket.addEventListener('message', handleMessage);
