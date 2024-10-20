@@ -44,6 +44,9 @@
 - **Node.js**: For server-side logic.
 - **Hono**: For handling WebSocket connections.
 - **Prisma**: For efficient database interactions.
+  
+### WebSocket Technology
+- **WebSockets**: A communication protocol that provides full-duplex communication channels over a single TCP connection, enabling real-time data transmission.
 
 ### Deployment
 - **Frontend**: Deployed on [Vercel](https://vercel.com).
