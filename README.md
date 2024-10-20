@@ -1,6 +1,5 @@
 # PulseBoard
-
-![PulseBoard](https://pulse-board.vercel.app) <!-- Replace with your logo URL -->
+[🔗 Live Demo: PulseBoard](https://pulse-board.vercel.app)
 
 ---
 
@@ -57,3 +56,18 @@
 1. Clone the repository:
    ```bash
    git clone https://github.com/irshad017/PulseBoard.git
+
+Navigate into the project directory:
+
+    cd PulseBoard
+Install the dependencies:
+
+    npm install
+Run the development server:
+
+    npm run dev
+Open your browser and go to http://localhost:3000.
+
+🔗 Live Demo
+Check out the live demo of PulseBoard here.
+
