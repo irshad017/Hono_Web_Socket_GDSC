@@ -12,6 +12,7 @@ interface BarChartProps {
 const BarChart: React.FC<BarChartProps> = ({ title }) => {
     const [BARData, setBARData] = useState<number[]>([])
     // const [BARTimes, setBARTimes] = useState<string[]>([])
+    // console.log("sles", BARData)
     useEffect(() => {
         const handleMessage = (event: MessageEvent) => {
             const message = JSON.parse(event.data);
@@ -31,7 +32,7 @@ const BarChart: React.FC<BarChartProps> = ({ title }) => {
         };
     }, []);
     const data = {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+        labels: ['Shoes', 'T-Shirts', 'Jeans', 'Hoodie', 'Jacket'],
         datasets: [
         {
             label: 'Sales',
@@ -44,7 +45,7 @@ const BarChart: React.FC<BarChartProps> = ({ title }) => {
     return (
         <div className="bg-white rounded-lg shadow-md p-6">
         <h3 className="text-xl font-semibold">{title}</h3>
-        <div className="mt-4">
+        <div className="mt-4 min-h-[300px] h-full">
             <Bar data={data} />
         </div>
         </div>

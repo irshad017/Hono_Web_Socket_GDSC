@@ -28,7 +28,7 @@ const PieChartCard: React.FC<{ title: string }> = ({ title }) => {
         };
     }, []);
     const data = {
-        labels: ['Product A', 'B', 'C', 'D', 'E'],
+        labels: ['Shoes', 'T-Shirts', 'Jeans', 'Hoodie', 'Jacket'],
         datasets: [
         {
             data: PIEData,
@@ -40,7 +40,7 @@ const PieChartCard: React.FC<{ title: string }> = ({ title }) => {
     return (
         <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold">{title}</h3>
-            <div className="mt-4">
+            <div className="mt-4 min-h-[300px] h-full">
                 <Pie data={data} />
             </div>
         </div>

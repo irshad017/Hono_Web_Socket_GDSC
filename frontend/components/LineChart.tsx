@@ -10,11 +10,11 @@ interface LineChartProps {
 
 const LineChart: React.FC<LineChartProps> = ({ title }) => {
     const data = {
-        labels: ['January', 'February', 'March', 'April', 'May'],
+        labels: ['Week-1', 'Week-2', 'Week-3', 'Week-4', 'Week-5','Week-6', 'Week-7', 'Week-8', 'Week-9', 'Week-10','Week-11', 'Week-12', 'Week-13', 'Week-14', 'Week-15','Week-16'],
         datasets: [
         {
             label: 'Growth',
-            data: [23,83,19,78,4,100],
+            data: [23,30,27,38,40,44,41,35,60,78,60,83,65,88,85,99],
             fill: false,
             borderColor: '#4f46e5',
         },
@@ -24,7 +24,7 @@ const LineChart: React.FC<LineChartProps> = ({ title }) => {
     return (
         <div className="bg-white rounded-lg shadow-md p-6">
         <h3 className="text-xl font-semibold">{title}</h3>
-        <div className="mt-4">
+        <div className="mt-4 min-h-[300px] h-full">
             <Line data={data} />
         </div>
         </div>

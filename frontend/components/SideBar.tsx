@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sidebar: React.FC = () => {
     return (
-        <aside className="bg-blue-600 text-white w-64 p-4 h-screen sticky top-0 hidden md:block">
+        <aside className="bg-blue-600 text-white w-full lg:w-2/12 p-4 h-auto lg:h-screen lg:sticky top-0 hidden lg:block">
             <h2 className="text-2xl font-semibold">Dashboard</h2>
             <nav className="mt-6">
                 <ul>

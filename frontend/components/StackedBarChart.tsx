@@ -25,7 +25,7 @@ const StackedBarChart: React.FC<StackedBarChartProps> = ({ title }) => {
     return (
         <div className="bg-white rounded-lg shadow-md p-6">
         <h3 className="text-xl font-semibold">{title}</h3>
-        <div className="mt-4">
+        <div className="mt-4 min-h-[300px] h-full">
             <Bar data={data} options={{ scales: { x: { stacked: true }, y: { stacked: true } } }} />
         </div>
         </div>
