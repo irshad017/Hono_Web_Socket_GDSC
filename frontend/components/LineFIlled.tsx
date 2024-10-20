@@ -104,7 +104,7 @@ const FilledLineChart: React.FC<LineChartProps> = ({ title }) => {
     return (
         <div className="bg-white rounded-lg shadow-md p-6">
         <h3 className="text-xl font-semibold">{title} <span className='text-sm text-gray-600'>Date: {date} </span></h3>
-        <div className="mt-4">
+        <div className="mt-4 min-h-[300px] h-full">
             <Line data={chartData} options={options} />
         </div>
         </div>
