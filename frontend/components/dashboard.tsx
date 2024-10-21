@@ -55,8 +55,8 @@ const Dashboard: React.FC = () => {
                         <StackedBarChart title="StackedBar" />
                     </div>
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-                        <h2 className="text-lg font-semibold mb-2">Product Sales</h2>
-                        <PolarChart title="StackedBar" />
+                        <h2 className="text-lg font-semibold mb-2">Polar Sales Chart</h2>
+                        <PolarChart title="Sales" />
                     </div>
                 </div>
             </main>
